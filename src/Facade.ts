@@ -8,14 +8,14 @@ export class Facade implements IQAFacade {
     this.questionService.add(text);
   }
   editQuestion(questionId: string, newText: string): void {
-    throw new Error("Method not implemented.");
+    this.questionService.edit(questionId, newText);
   }
-  removeQuestion(questionId: string): void {
-    throw new Error("Method not implemented.");
+  //removeQuestion(questionId: string): void {
+  removeQuestion(): void {
+    this.questionService.remove();
   }
   findAllQuestions(): Question[] {
     return this.questionService.findAll();
-    throw new Error("Method not implemented.");
   }
   findSortedQuestions(): Question[] {
     throw new Error("Method not implemented.");

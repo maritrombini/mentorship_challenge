@@ -26,4 +26,9 @@ export class QuestionService {
   findAll(): Question[] {
     return this.questions;
   }
+  edit(questionId: string, newText: string) {}
+  remove() {
+    this.questions.pop();
+    return this.questions;
+  }
 }

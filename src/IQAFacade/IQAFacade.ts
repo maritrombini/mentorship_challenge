@@ -1,4 +1,4 @@
-import { Question } from "Question";
+import { Question } from "../Question/Question";
 
 export interface IQAFacade {
   // Adiciona uma nova pergunta

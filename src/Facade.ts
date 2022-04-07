@@ -1,18 +1,11 @@
-import { IQAFacade } from "./IQAFacade";
-import { Question } from "../src/Question";
+import { IQAFacade } from "./IQAFacade/IQAFacade";
+import { Question, QuestionService } from "./Question/Question";
 
 export class Facade implements IQAFacade {
-  questions: Question[] = [];
+  questionService = new QuestionService();
 
   addQuestion(text: string): void {
-    const question: Question = new Question(
-      "2",
-      "Qual a proposta da mentoria?"
-    );
-    this.questions.push();
-    //console.log(questions);
-
-    throw new Error("Method not implemented.");
+    this.questionService.add(text);
   }
   editQuestion(questionId: string, newText: string): void {
     throw new Error("Method not implemented.");
@@ -21,6 +14,7 @@ export class Facade implements IQAFacade {
     throw new Error("Method not implemented.");
   }
   findAllQuestions(): Question[] {
+    return this.questionService.findAll();
     throw new Error("Method not implemented.");
   }
   findSortedQuestions(): Question[] {

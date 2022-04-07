@@ -3,6 +3,9 @@ export class Question {
   text: string;
   answers?: string[];
   constructor(questionId: string, questionText: string) {
+    if (questionText.length > 100) {
+      throw new Error("100 character limit exceeded!");
+    }
     this.id = questionId;
     this.text = questionText;
     this.answers = [];

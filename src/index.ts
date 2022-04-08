@@ -40,16 +40,25 @@ rl.question(
 const question = "What is the purpose of the mentorship?";
 const question2 = "When does the mentorship start?";
 const question3 = "What skills can be developed?";
+const updatedQuestion = "How hard was this challenge?";
 
+//ADD
 const facade = new Facade();
 facade.addQuestion(question);
 facade.addQuestion(question2);
 facade.addQuestion(question3);
 
-const firstQuestionId = facade.findAllQuestions()[0].id;
-
-console.log(facade.findAllQuestions());
+//FIND
+const firstQuestionId = facade.findAllQuestions()[2].id;
 //console.log(facade.findAllQuestions()[0].id);
 //console.log(firstQuestionId);
-facade.removeQuestion();
+console.log(facade.findAllQuestions());
+
+//EDIT
+const updateQuestion = facade.editQuestion(firstQuestionId, updatedQuestion);
+console.log(facade.findAllQuestions());
+
+//REMOVE
+const deletedQuestion = facade.findAllQuestions()[2].id;
+facade.removeQuestion(deletedQuestion);
 console.log(facade.findAllQuestions());

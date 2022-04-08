@@ -10,9 +10,8 @@ export class Facade implements IQAFacade {
   editQuestion(questionId: string, newText: string): void {
     this.questionService.edit(questionId, newText);
   }
-  //removeQuestion(questionId: string): void {
-  removeQuestion(): void {
-    this.questionService.remove();
+  removeQuestion(questionId: string): void {
+    this.questionService.remove(questionId);
   }
   findAllQuestions(): Question[] {
     return this.questionService.findAll();

@@ -1,5 +1,3 @@
-import { text } from "stream/consumers";
-
 const LIMITCHARACTERS = 100;
 export class Question {
   id: string;
@@ -57,7 +55,10 @@ export class QuestionService {
   remove(id: string) {
     const deleteQuestion = this.questions.forEach((question) => {
       if (question.id === id) {
-        this.questions.shift();
+        let index = this.questions.indexOf(question);
+        console.log(`pergunta que sera removida ${question.text}`);
+        console.log(`id da pergunta que sera removida ${question.id}`);
+        this.questions.splice(index, 1);
       }
     });
     try {

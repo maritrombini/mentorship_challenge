@@ -49,16 +49,16 @@ facade.addQuestion(question2);
 facade.addQuestion(question3);
 
 //FIND
-const firstQuestionId = facade.findAllQuestions()[2].id;
+const firstQuestionId = facade.findAllQuestions()[0].id;
 //console.log(facade.findAllQuestions()[0].id);
 //console.log(firstQuestionId);
-console.log(facade.findAllQuestions());
+//console.log(facade.findAllQuestions());
 
 //EDIT
 const updateQuestion = facade.editQuestion(firstQuestionId, updatedQuestion);
 console.log(facade.findAllQuestions());
 
 //REMOVE
-const deletedQuestion = facade.findAllQuestions()[2].id;
-facade.removeQuestion(deletedQuestion);
+const deleteQuestion = facade.findAllQuestions()[1].id;
+facade.removeQuestion(deleteQuestion);
 console.log(facade.findAllQuestions());

@@ -11,18 +11,18 @@ export class Facade implements IQAFacade {
     this.questionService.edit(questionId, newText);
   }
   removeQuestion(questionId: string): void {
-    this.questionService.remove(questionId);
+    return this.questionService.remove(questionId);
   }
   findAllQuestions(): Question[] {
     return this.questionService.findAll();
   }
   findSortedQuestions(): Question[] {
-    throw new Error("Method not implemented.");
+    return this.questionService.sort();
   }
   addAnswer(questionId: string, answer: string): void {
-    throw new Error("Method not implemented.");
+    this.questionService.addAnswer(questionId, answer);
   }
   checkAnswers(questionId: string): string[] {
-    throw new Error("Method not implemented.");
+    return this.questionService.checkAnswer(questionId);
   }
 }

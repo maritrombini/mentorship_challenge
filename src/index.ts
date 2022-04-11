@@ -44,7 +44,7 @@ console.log("");
 
 //FIND
 console.log(
-  " +----- FindAll Questions After Answers Added -----+ ",
+  " +----- FindAll Questions After Added Answers -----+ ",
   facade.findAllQuestions()
 );
 

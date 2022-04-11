@@ -23,37 +23,40 @@ const questionId = facade.findAllQuestions()[0].id;
 const questionId2 = facade.findAllQuestions()[1].id;
 
 //FIND
-console.log(" +----- FindALl Questions -----+ ", facade.findAllQuestions());
+console.log("\n +----- FindALl Questions -----+ \n", facade.findAllQuestions());
 
 //EDIT
 facade.editQuestion(questionId, changedQuestion);
-console.log(" +----- Edited Questions -----+ ", facade.findAllQuestions());
+console.log("\n +----- Edited Questions -----+ \n", facade.findAllQuestions());
 
 //ADD ANSWER
 facade.addAnswer(questionId, answer1);
 facade.addAnswer(questionId2, answer2);
 console.log(
-  " +----- Check Added Answer -----+ ",
+  "\n +----- Check Added Answer -----+ \n",
   facade.checkAnswers(questionId)
 );
 console.log(
-  " +----- Check Added Answer -----+ ",
+  "\n +----- Check Added Answer -----+ \n",
   facade.checkAnswers(questionId2)
 );
 console.log("");
 
 //FIND
 console.log(
-  " +----- FindAll Questions After Added Answers -----+ ",
+  "\n +----- FindAll Questions After Added Answers -----+ \n",
   facade.findAllQuestions()
 );
 
 //REMOVE
 facade.removeQuestion(questionId);
 console.log(
-  " +----- Without Removed Question -----+ ",
+  "\n +----- Without Removed Question -----+ \n",
   facade.findAllQuestions()
 );
 
 //SORT
-console.log(" +----- Sorted Questions -----+ ", facade.findSortedQuestions());
+console.log(
+  "\n +----- Sorted Questions -----+ \n",
+  facade.findSortedQuestions()
+);

@@ -1,14 +1,14 @@
 <h1 align="center"> Mentorship challenge  </h1>
 
-## Question and answer system for company mentoring using Facade pattern
+### Question and answer system for company mentoring using Facade pattern
 
 </br>
 
-### Exercise for didactic purposes
+#### Exercise for didactic purposes
 
 </br>
 
-## `Functionalities`
+### `Functionalities`
 
 - Add Question
 - Edit Question
@@ -16,9 +16,9 @@
 - FindAll Questions
 - Sort Questions
 - Add Answer
-- Check ANswer
+- Check Answer
 
-## `Instructions`
+### `Instructions`
 
 - Clone the repository
 - Run the command `npm start`

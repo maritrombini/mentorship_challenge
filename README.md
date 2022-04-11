@@ -27,8 +27,8 @@
 
 ## Code Example
 
-<img src="mentorship1.png" align="center" alt="Code example">
+<img src="./src/Images/mentorship1.png" align="center" alt="Code example">
 
 </br>
 
-<img src="mentorship2.png" align="center" alt="Code example">
+<img src="./src/Images/mentorship2.png" align="center" alt="Code example">

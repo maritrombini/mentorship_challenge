@@ -1,64 +1,59 @@
 import { Facade } from "./Facade";
 
-/*
-let rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const question1 = "1st Question";
+const question2 = "2nd Question";
+const question3 = "3rd Question";
+const question4 = "4th Question";
+const changedQuestion = "Changed Question";
 
-console.log("");
-console.log("===== Mentorship Challenge Wesley Silva =====");
-console.log("");
+const answer1 = "4th Answer";
+const answer2 = "2nd Answer";
+const answer3 = "3rd Answer";
+const answer4 = "4th Answer";
 
-const answer = 0;
-
-rl.question(
-  "What would you like to do? \n 1 - Add Question \n 2 - List Questions ",
-  (answer) => {
-    switch (answer.toLowerCase()) {
-      case "1":
-        const question = "What is the purpose of the mentorship?";
-        const facadeAdd = new Facade();
-        facadeAdd.addQuestion(question);
-        console.log(facadeAdd.findAllQuestions());
-
-        console.log("Added!");
-        break;
-      case "2":
-        const facade = new Facade();
-        console.log(facade.findAllQuestions());
-        console.log("Here they are!");
-        break;
-      default:
-        console.log("Invalid answer!");
-    }
-    rl.close();
-  }
-);
-*/
-
-const question = "What is the purpose of the mentorship?";
-const question2 = "When does the mentorship start?";
-const question3 = "What skills can be developed?";
-const updatedQuestion = "How hard was this challenge?";
-
-//ADD
+//ADD QUESTION
 const facade = new Facade();
-facade.addQuestion(question);
+facade.addQuestion(question1);
 facade.addQuestion(question2);
 facade.addQuestion(question3);
+facade.addQuestion(question4);
+
+//ADD ANSWER
+const questionId = facade.findAllQuestions()[0].id;
+const questionId2 = facade.findAllQuestions()[1].id;
 
 //FIND
-const firstQuestionId = facade.findAllQuestions()[0].id;
-//console.log(facade.findAllQuestions()[0].id);
-//console.log(firstQuestionId);
-//console.log(facade.findAllQuestions());
+console.log(" +----- FindALl Questions -----+ ", facade.findAllQuestions());
 
 //EDIT
-const updateQuestion = facade.editQuestion(firstQuestionId, updatedQuestion);
-console.log(facade.findAllQuestions());
+facade.editQuestion(questionId, changedQuestion);
+console.log(" +----- Edited Questions -----+ ", facade.findAllQuestions());
+
+//ADD ANSWER
+facade.addAnswer(questionId, answer1);
+facade.addAnswer(questionId2, answer2);
+console.log(
+  " +----- Check Added Answer -----+ ",
+  facade.checkAnswers(questionId)
+);
+console.log(
+  " +----- Check Added Answer -----+ ",
+  facade.checkAnswers(questionId2)
+);
+console.log("");
+
+//FIND
+console.log(
+  " +----- FindAll Questions After Answers Added -----+ ",
+  facade.findAllQuestions()
+);
 
 //REMOVE
-const deleteQuestion = facade.findAllQuestions()[1].id;
-facade.removeQuestion(deleteQuestion);
-console.log(facade.findAllQuestions());
+facade.removeQuestion(questionId);
+console.log(
+  " +----- Without Removed Question -----+ ",
+  facade.findAllQuestions()
+);
+
+//SORT
+console.log(" +----- Sorted Questions -----+ ", facade.findSortedQuestions());

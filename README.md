@@ -21,7 +21,7 @@
 ### `Instructions`
 
 - Clone the repository
-- Run the command `npm start`
+- Run the commands `npm install` and `npm start`
 
 </br>
 
